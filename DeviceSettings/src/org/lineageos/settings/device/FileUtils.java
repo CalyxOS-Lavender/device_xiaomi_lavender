@@ -244,6 +244,14 @@ public final class FileUtils {
         return line;
     }
 
+    static boolean getFileValueAsBoolean(String filename, boolean defValue) {
+        String fileValue = getValue(filename);
+        if (fileValue != null) {
+            return !fileValue.equals("0");
+        }
+        return defValue;
+    }
+
     static void setProp(String prop, boolean value) {
         if (value) {
             SystemProperties.set(prop, "1");

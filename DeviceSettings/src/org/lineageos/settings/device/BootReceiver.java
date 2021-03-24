@@ -54,6 +54,10 @@ public class BootReceiver extends BroadcastReceiver {
         FileUtils.setValue(DeviceSettings.VIBRATION_STRENGTH_PATH, Settings.Secure.getInt(
                 context.getContentResolver(), DeviceSettings.PREF_VIBRATION_STRENGTH, 80) / 100.0 * (DeviceSettings.MAX_VIBRATION - DeviceSettings.MIN_VIBRATION) + DeviceSettings.MIN_VIBRATION);
 
+        // USB Fastcharge
+        FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                DeviceSettings.PREF_USB_FASTCHARGE, 0));
+
         // FPS Info
         boolean enabled = Settings.Secure.getInt(context.getContentResolver(), 
                 DeviceSettings.PREF_KEY_FPS_INFO, 0) == 1;

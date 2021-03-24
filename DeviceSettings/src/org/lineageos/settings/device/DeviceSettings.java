@@ -53,6 +53,9 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final  String MIC_GAIN_PATH = "/sys/kernel/sound_control/mic_gain";
 
     public static final String PREF_KEY_FPS_INFO = "fps_info";
+    public static final String CATEGORY_FASTCHARGE = "usb_fastcharge";
+    public static final String PREF_USB_FASTCHARGE = "fastcharge";
+    public static final String USB_FASTCHARGE_PATH = "/sys/kernel/fast_charge/force_fast_charge";
 
     // value of vtg_min and vtg_max
     public static final int MIN_VIBRATION = 116;
@@ -129,7 +132,6 @@ public class DeviceSettings extends PreferenceFragment implements
         } else {
           gainCategory.removePreference(findPreference(PREF_MIC_GAIN));
         }
-
         // Display Category
         PreferenceCategory displayCategory = (PreferenceCategory) findPreference(CATEGORY_DISPLAY);
         // Doze
@@ -152,6 +154,15 @@ public class DeviceSettings extends PreferenceFragment implements
             return true;
         });
 
+        // USB Fastcharge
+        if (FileUtils.fileWritable(USB_FASTCHARGE_PATH)) {
+            mFastcharge = (SecureSettingSwitchPreference) findPreference(PREF_USB_FASTCHARGE);
+            mFastcharge.setEnabled(Fastcharge.isSupported());
+            mFastcharge.setChecked(Fastcharge.isCurrentlyEnabled(this.getContext()));
+            mFastcharge.setOnPreferenceChangeListener(new Fastcharge(getContext()));
+        } else {
+            getPreferenceScreen().removePreference(findPreference(CATEGORY_FASTCHARGE));
+        }
     }
 
     @Override
