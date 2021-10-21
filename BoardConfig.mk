@@ -112,6 +112,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_CONFIG := vendor/lavender-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/lavender
 TARGET_KERNEL_VERSION := 4.19
+TARGET_COMPILE_WITH_MSM_KERNEL := true
 override KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-android-
 
 # Platform
