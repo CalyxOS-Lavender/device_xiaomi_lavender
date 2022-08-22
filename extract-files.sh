@@ -57,15 +57,8 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/bin/mlipayd@1.1)
-           "${PATCHELF}" --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
-            ;;
         vendor/etc/sensors/hals.conf)
             sed -i '/sensors.elliptic.so/d' "${2}"
-            ;;
-        vendor/lib64/libmlipay.so | vendor/lib64/libmlipay@1.1.so)
-            "${PATCHELF}" --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
-            sed -i "s|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g" "${2}"
             ;;
         vendor/lib/lib_lowlight.so)
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
