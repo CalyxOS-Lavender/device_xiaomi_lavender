@@ -113,6 +113,7 @@ ro.bluetooth.a2dp_offload.supported=true
 vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac
 ro.audio.spatializer_enabled=true
+persist.vendor.audio.spatializer.speaker_enabled=true
 
 # Camera
 persist.camera.perflock.enable=0
