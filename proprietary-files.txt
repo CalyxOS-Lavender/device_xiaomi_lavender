@@ -108,6 +108,9 @@ vendor/lib64/libaudioparsers.so|506b43e9d5c18e5eeaa18cc734324f0138d7e9cc
 vendor/lib64/libFlacSwDec.so|3b2798cf7ab8a5e5d515a5a2489a7e77ba2ee62a
 vendor/lib64/libqtigef.so|de0024eed15f7ba45968e435971730230a643dc3
 
+# Audio FX modules - from google/cheetah/cheetah:15/AP3A.241005.015
+vendor/lib/soundfx/libspatialaudio.so|1b574e25db97b76b712ddffda6da42c3c5c5df6e
+
 # Bluetooth - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|5fb0c2184b062039281282baf6543f6bea56a9a8
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
