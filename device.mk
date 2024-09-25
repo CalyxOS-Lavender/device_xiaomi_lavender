@@ -466,6 +466,10 @@ PRODUCT_BOOT_JARS += \
     telephony-ext \
     xiaomi-telephony-stub
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal-service.qti
+
 # UFFD GC
 OVERRIDE_ENABLE_UFFD_GC := false
 
