@@ -311,8 +311,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     SettingsOverlay \
-    NoCutoutOverlay \
-    NotchBarKiller
+    NoCutoutOverlay
 
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
