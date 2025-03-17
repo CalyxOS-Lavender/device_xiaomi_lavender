@@ -464,6 +464,9 @@ PRODUCT_PACKAGES += \
     libpng.vendor \
     libprocessgroup.vendor
 
+# UFFD GC
+OVERRIDE_ENABLE_UFFD_GC := false
+
 # Update
 AB_OTA_UPDATER := false
 
