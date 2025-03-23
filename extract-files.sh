@@ -82,6 +82,14 @@ function blob_fixup() {
            "${PATCHELF}" --clear-symbol-version "__aeabi_memset" "${2}"
            "${PATCHELF}" --clear-symbol-version "__gnu_Unwind_Find_exidx" "${2}"
             ;;
+        vendor/lib64/hw/consumerir.default.so)
+            [ "$2" = "" ] && return 0
+           "${PATCHELF}" --set-soname "consumerir.lirc.sdm660.so" "consumerir.default.so" "${2}"
+            ;;
+        vendor/lib64/hw/consumerir.default.so)
+            [ "$2" = "" ] && return 0
+           "${PATCHELF}" --set-soname "consumerir.spi.sdm660.so" "consumerir.default.so" "${2}"
+            ;;
     esac
 }
 
