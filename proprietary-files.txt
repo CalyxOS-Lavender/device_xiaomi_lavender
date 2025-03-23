@@ -1077,10 +1077,10 @@ vendor/lib/libmmcamera_tintless_algo.so|87c1a8a6d6386cd2234494fc4aecc82642462e51
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so|8d0742522e0af649ee05fb85fa1a204ac68af48b
 
 # ConsumerIR (lirc) - from jason V12.0.1.0.PCHCNXM
-vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.lirc.sdm660.so|8c614f98e2a42b5ba9e148c01b3d69e7fb59ce1d
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.lirc.sdm660.so;DISABLE_CHECKELF|8c614f98e2a42b5ba9e148c01b3d69e7fb59ce1d
 
 # ConsumerIR (spi) - from jasmine V11.0.28.0.QDIMIXM
-vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.spi.sdm660.so|d1f275a91557dfab52e82906986c5094fe078722
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.spi.sdm660.so;DISABLE_CHECKELF|d1f275a91557dfab52e82906986c5094fe078722
 
 # DPM - from S62Pro
 system_ext/bin/dpmd|4662a11c5331919cc08d541a298444ffce18cc1b
