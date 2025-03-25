@@ -86,6 +86,12 @@ function blob_fixup() {
 	vendor/lib/libts_detected_face_hal.so)
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;  
+	vendor/lib/libmmcamera_faceproc.so)
+            [ "$2" = "" ] && return 0
+           "${PATCHELF}" --clear-symbol-version "__aeabi_memcpy" "${2}"
+           "${PATCHELF}" --clear-symbol-version "__aeabi_memset" "${2}"
+           "${PATCHELF}" --clear-symbol-version "__gnu_Unwind_Find_exidx" "${2}"
+            ;;
     esac
 }
 
