@@ -86,21 +86,6 @@ function blob_fixup() {
 	vendor/lib/libts_detected_face_hal.so)
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;  
-	vendor/lib/libchromaflash.so)
-            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
-            ;;  
-	vendor/lib/libmmcamera_ubifocus_lib.so)
-            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
-            ;;  
-	vendor/lib/liboptizoom.so)
-            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
-            ;;  
-	vendor/lib/libtrueportrait.so)
-            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
-            ;;  
-	vendor/lib/libubifocus.so)
-            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
-            ;;  
     esac
 }
 
