@@ -124,6 +124,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
     android.frameworks.displayservice@1.0 \
     libdisplayconfig \
+    libdrmutils \
     libqdMetaData \
     libtinyxml \
     vendor.display.config@2.0 \
