@@ -213,6 +213,8 @@ PRODUCT_PACKAGES += \
     IFAAService
 
 # Init
+$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):libinit_lavender)
+
 PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom_ramdisk \

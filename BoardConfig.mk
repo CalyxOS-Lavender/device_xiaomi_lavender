@@ -92,10 +92,6 @@ DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 HWUI_COMPILE_FOR_PERF := true
 USE_OPENGL_RENDERER := true
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_lavender
-TARGET_RECOVERY_DEVICE_MODULES := libinit_lavender
-
 # Kernel
 BOARD_KERNEL_CMDLINE := \
     androidboot.configfs=true \
