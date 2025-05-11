@@ -1323,7 +1323,7 @@ vendor/bin/msm_irqbalance|e917104fbd26c844d27ffb2b7ec4f665fdfb8b78
 
 # Peripheral manager - from jasmine
 vendor/bin/pm-proxy|bc4e972e3fe595b973197efe5114da8ff4339a59
-vendor/bin/pm-service|ea63802cf0483ee4ed2a6611ba7f1d0f36970c06
+vendor/bin/pm-service|bf5ca6e5dfd398549bdd563c6e3edea12f4c027a
 vendor/lib64/libperipheral_client.so|a0dd574c8af3135adae10ef49065fa765906db7a
 
 # Postprocessing - from LA.UM.9.2.r1-03500-SDMxx0.0
