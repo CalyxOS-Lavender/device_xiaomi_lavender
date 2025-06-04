@@ -38,6 +38,7 @@ function vendor_imports() {
 		"vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um",
 		"vendor/qcom/opensource/dataservices",
 		"vendor/qcom/opensource/display",
+		"hardware/qcom/wlan/wcn6740",
 EOF
 }
 
