@@ -120,7 +120,6 @@ override KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-android-
 # Platform
 BOARD_VENDOR := xiaomi
 TARGET_BOARD_PLATFORM := sdm660
-OVERRIDE_QCOM_HARDWARE_VARIANT := sdm660
 TARGET_ENFORCES_QSSI := true
 
 # Partitions
