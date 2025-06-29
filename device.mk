@@ -66,6 +66,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
+# Board
+TARGET_BOARD_PLATFORM := sdm660
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.sdm660 \
@@ -322,7 +325,8 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lineage \
+    $(LOCAL_PATH)/overlay-yaap
 
 PRODUCT_PACKAGES += \
     SettingsOverlay \
@@ -455,23 +459,6 @@ PRODUCT_SHIPPING_API_LEVEL := 28
 # Shims
 #PRODUCT_PACKAGES += \
 #    libcamera_sdm660_shim
-
-# Telephony
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
-PRODUCT_PACKAGES += \
-    libpng.vendor \
-    libprocessgroup.vendor
 
 # UFFD GC
 OVERRIDE_ENABLE_UFFD_GC := false

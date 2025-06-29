@@ -8,22 +8,15 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common AxionOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-AXION_MAINTAINER := Aeoniixx
-AXION_PROCESSOR := Snapdragon_660
-AXION_CAMERA_REAR_INFO := 48,5
-AXION_CAMERA_FRONT_INFO := 13
-TARGET_PREBUILT_BCR := false
-TARGET_INCLUDE_VIPERFX := false
-TARGET_BOOT_ANIMATION_RES := 1080
-AXION_CPU_SMALL_CORES := 0,1,2,3,4,5
-AXION_CPU_BIG_CORES := 6,7
+# Inherit some common YAAP stuff
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+TARGET_PROVIDES_POWERHAL := true
+TARGET_BUILD_GAPPS := true
 
 # Inherit from lavender device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-PRODUCT_NAME := lineage_lavender
+PRODUCT_NAME := yaap_lavender
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := lavender
 PRODUCT_MANUFACTURER := Xiaomi
