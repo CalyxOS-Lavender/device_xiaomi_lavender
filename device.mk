@@ -309,12 +309,10 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage \
-    $(LOCAL_PATH)/overlay-yaap
+    $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
-    SettingsOverlay \
-    NoCutoutOverlay \
+    SettingsOverlayLavender \
     DeviceAsWebcamLavender
 
 # Add common definitions for Qualcomm
@@ -428,7 +426,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/calyx/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi
 
@@ -443,6 +441,28 @@ PRODUCT_SHIPPING_API_LEVEL := 28
 # Shims
 #PRODUCT_PACKAGES += \
 #    libcamera_sdm660_shim
+
+# RIL
+PRODUCT_PACKAGES += \
+    extphonelib \
+    extphonelib-product \
+    extphonelib.xml \
+    extphonelib_product.xml \
+    ims-ext-common \
+    ims_ext_common.xml \
+    librmnetctl \
+    libprotobuf-cpp-full \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-hidl-wrapper-prd \
+    qti_telephony_hidl_wrapper_prd.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
+    telephony-ext
+
+# RIL JAR
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # UFFD GC
 OVERRIDE_ENABLE_UFFD_GC := false

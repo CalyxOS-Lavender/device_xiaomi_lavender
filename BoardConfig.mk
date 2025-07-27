@@ -80,7 +80,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
    hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml \
    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
-   vendor/yaap/config/device_framework_matrix.xml
+   vendor/calyx/config/device_framework_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/framework_manifest.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
@@ -147,7 +147,6 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 67108864 # Always ext4 read-write
 
 # Partitions
-ifeq ($(TARGET_BUILD_GAPPS),true)
 BOARD_EROFS_PCLUSTER_SIZE := 131072
 BOARD_EROFS_COMPRESSOR := lz4
 ifneq ($(DISABLE_EROFS),true) # (GApps read/write)
@@ -161,13 +160,6 @@ BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := erofs
 #BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
-endif
-else # (Vanilla with 1.5GB reserved space for GApps)
-BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
-BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1610612736
-BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 67108864
-BOARD_ODMIMAGE_PARTITION_RESERVED_SIZE := 1048576
-BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 67108864
 endif
 
 TARGET_COPY_OUT_ODM := odm
@@ -201,7 +193,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # SELinux
-include device/lineage/sepolicy/libperfmgr/sepolicy.mk
+include device/calyx/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private

@@ -8,16 +8,15 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common YAAP stuff
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+# Inherit some common CalyxOS stuff
+$(call inherit-product, vendor/calyx/config/common_phone.mk)
 TARGET_PROVIDES_POWERHAL := true
-TARGET_BUILD_GAPPS := true
 DISABLE_EROFS := false
 
 # Inherit from lavender device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-PRODUCT_NAME := yaap_lavender
+PRODUCT_NAME := calyx_lavender
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := lavender
 PRODUCT_MANUFACTURER := Xiaomi
